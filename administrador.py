@@ -7,6 +7,8 @@ class Producto:
         self._conteo_inventario = conteo_inventario
 
     #HACER LAS VARIABLES PRIVADAS?
+
+    #GETTER Y SETTER PARA FUNCIONAMIENTO DE CLASES HIJAS
     def get_nombre(self):
         return self._nombre
 
@@ -39,13 +41,8 @@ class Producto:
 
     #PARA MODIFICAR INVENTARIO
     def agregar_inventario(self, cantidad):
-        """Suma cantidad al conteo de inventario."""
         self._conteo_inventario += cantidad
 
     def verificar_inventario(self, limite):
-        """Muestra un mensaje si el inventario está por debajo del límite."""
         if self._conteo_inventario < limite:
             print(f"¡Alerta! Solicitar producto {self._nombre} a {self._proveedor}. Inventario actual: {self._conteo_inventario}")
-
-
-
